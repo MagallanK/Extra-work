@@ -11,6 +11,13 @@
  * All test arrays will have at least one element and are valid.
  */
 
+function minMax(arr){
+   var minArr = Math.min(...arr);
+    var maxArr = Math.max(...arr);
+
+    return [minArr, maxArr];
+}
+
 
 /**
  * Filter out Strings from an Array
@@ -28,6 +35,18 @@
  * Numbers in the array should not repeat.
  * The original order must be maintained.
  */
+
+
+function filterArray(arr){
+
+    var numbers = []
+    for(var i = 0; i < arr.length; i++){
+        if(typeof arr[i] === 'number'){
+            numbers.push(arr[i]);
+        }
+    }
+    return numbers;
+}
 
 
 /**
