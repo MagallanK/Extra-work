@@ -11,8 +11,8 @@
  * All test arrays will have at least one element and are valid.
  */
 
-function minMax(arr){
-   var minArr = Math.min(...arr);
+function minMax(arr) {
+    var minArr = Math.min(...arr);
     var maxArr = Math.max(...arr);
 
     return [minArr, maxArr];
@@ -37,11 +37,11 @@ function minMax(arr){
  */
 
 
-function filterArray(arr){
+function filterArray(arr) {
 
     var numbers = []
-    for(var i = 0; i < arr.length; i++){
-        if(typeof arr[i] === 'number'){
+    for (var i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'number') {
             numbers.push(arr[i]);
         }
     }
@@ -62,6 +62,11 @@ function filterArray(arr){
  * >> isAvgWhole([9, 2, 2, 5]) ➞ false
  */
 
+function isAvgWhole(arr) {
+    return arr = typeof 'boolean';
+
+}
+
 
 /**
  * Drink Sorting
@@ -77,6 +82,15 @@ function filterArray(arr){
  * Examples
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
+
+function sortDrinkByPrice(drinks){
+     drinks = [
+        {name: 'string', price: 'number'},
+        {name: 'string', price: 'number'}
+    ];
+     drinks.sort()
+}
+
 
 
 /**
@@ -312,7 +326,6 @@ function filterArray(arr){
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
-
 
 
 /**
