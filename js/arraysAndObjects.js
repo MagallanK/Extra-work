@@ -62,9 +62,24 @@ function filterArray(arr) {
  * >> isAvgWhole([9, 2, 2, 5]) ➞ false
  */
 
-function isAvgWhole(arr) {
-    return arr = typeof 'boolean';
+//sum will be numbers in array added
+//avg is sum / amount of numbers added in sum
 
+function isAvgWhole(arr) {
+    //loop through array and add each element to the sum
+
+    var sum = 0;
+    for(var i = 0; i < arr.length; i++){
+        sum = sum + arr[i];
+    }
+
+    //Get the average
+    var avg = sum / arr.length;
+    //check if the average is a whole number
+    if(parseInt(avg) === avg){
+        return true;
+    }
+    return false;
 }
 
 
@@ -84,11 +99,10 @@ function isAvgWhole(arr) {
  */
 
 function sortDrinkByPrice(drinks){
-     drinks = [
-        {name: 'string', price: 'number'},
-        {name: 'string', price: 'number'}
-    ];
-     drinks.sort()
+     drinks.sort(function(drink1, drink2){
+         return drink1.price - drink2.price;
+     });
+     return drinks;
 }
 
 
@@ -153,38 +167,38 @@ function sortDrinkByPrice(drinks){
  */
 
 
-/**
- * Array of Multiples
- * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
- *
- * Examples
- *
- * >> arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
- * >> arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
- * >> arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
- *
- * Notes
- * Notice that num is also included in the returned array.
- */
-
-
-/**
- * Get Sum of People's Budget
- * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
- *
- * Examples
- *
- * >> getBudgets([
- *        { name: "John", age: 21, budget: 23000 },
- *        { name: "Steve",  age: 32, budget: 40000 },
- *        { name: "Martin",  age: 16, budget: 2700 }
- *    ]) ➞ 65700
- * >> getBudgets([
- *        { name: "John",  age: 21, budget: 29000 },
- *        { name: "Steve",  age: 32, budget: 32000 },
- *        { name: "Martin",  age: 16, budget: 1600 }
- *    ]) ➞ 62600
- */
+// /**
+//  * Array of Multiples
+//  * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+//  *
+//  * Examples
+//  *
+//  * >> arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+//  * >> arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+//  * >> arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+//  *
+//  * Notes
+//  * Notice that num is also included in the returned array.
+//  */
+//
+//
+// /**
+//  * Get Sum of People's Budget
+//  * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+//  *
+//  * Examples
+//  *
+//  * >> getBudgets([
+//  *        { name: "John", age: 21, budget: 23000 },
+//  *        { name: "Steve",  age: 32, budget: 40000 },
+//  *        { name: "Martin",  age: 16, budget: 2700 }
+//  *    ]) ➞ 65700
+//  * >> getBudgets([
+//  *        { name: "John",  age: 21, budget: 29000 },
+//  *        { name: "Steve",  age: 32, budget: 32000 },
+//  *        { name: "Martin",  age: 16, budget: 1600 }
+//  *    ]) ➞ 62600
+//  */
 
 
 /**
