@@ -69,14 +69,14 @@ function isAvgWhole(arr) {
     //loop through array and add each element to the sum
 
     var sum = 0;
-    for(var i = 0; i < arr.length; i++){
+    for (var i = 0; i < arr.length; i++) {
         sum = sum + arr[i];
     }
 
     //Get the average
     var avg = sum / arr.length;
     //check if the average is a whole number
-    if(parseInt(avg) === avg){
+    if (parseInt(avg) === avg) {
         return true;
     }
     return false;
@@ -104,7 +104,6 @@ function sortDrinkByPrice(drinks){
      });
      return drinks;
 }
-
 
 
 /**
@@ -166,40 +165,73 @@ function sortDrinkByPrice(drinks){
  * Return an empty array if the object is empty.
  */
 
+function toArray(object){
 
-// /**
-//  * Array of Multiples
-//  * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
-//  *
-//  * Examples
-//  *
-//  * >> arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
-//  * >> arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
-//  * >> arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
-//  *
-//  * Notes
-//  * Notice that num is also included in the returned array.
-//  */
-//
-//
-// /**
-//  * Get Sum of People's Budget
-//  * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
-//  *
-//  * Examples
-//  *
-//  * >> getBudgets([
-//  *        { name: "John", age: 21, budget: 23000 },
-//  *        { name: "Steve",  age: 32, budget: 40000 },
-//  *        { name: "Martin",  age: 16, budget: 2700 }
-//  *    ]) ➞ 65700
-//  * >> getBudgets([
-//  *        { name: "John",  age: 21, budget: 29000 },
-//  *        { name: "Steve",  age: 32, budget: 32000 },
-//  *        { name: "Martin",  age: 16, budget: 1600 }
-//  *    ]) ➞ 62600
-//  */
+}
 
+
+/**
+ * Array of Multiples
+ * Create a function named arrayOfMultiples that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+ *
+ * Examples
+ *
+ * >> arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+ * >> arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+ * >> arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+ *
+ * Notes
+ * Notice that num is also included in the returned array.
+ */
+
+function arrayOfMultiples(num, length) {
+    var arr = [];
+    for(var i = 0; i < length.length; i++){
+        if(arr === length[i]){
+            return arr = (num + num) + length[i];
+        }
+    }
+
+}
+
+
+/**
+ * Get Sum of People's Budget
+ * Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+ *
+ * Examples
+ *
+ * >> getBudgets([
+ *        { name: "John", age: 21, budget: 23000 },
+ *        { name: "Steve",  age: 32, budget: 40000 },
+ *        { name: "Martin",  age: 16, budget: 2700 }
+ *    ]) ➞ 65700
+ * >> getBudgets([
+ *        { name: "John",  age: 21, budget: 29000 },
+ *        { name: "Steve",  age: 32, budget: 32000 },
+ *        { name: "Martin",  age: 16, budget: 1600 }
+ *    ]) ➞ 62600
+ */
+
+function getBudgets(arr) {
+
+    var firstBudg = [
+        { name: "John", age: 21, budget: 23000 },
+        { name: "Steve",  age: 32, budget: 40000 },
+        { name: "Martin",  age: 16, budget: 2700 }
+    ];
+    var secondBudg = [
+        { name: "John",  age: 21, budget: 29000 },
+        { name: "Steve",  age: 32, budget: 32000 },
+        { name: "Martin",  age: 16, budget: 1600 }
+    ];
+        var sumTotal1 = firstBudg.filter(firstBudg.budget);
+        var sumTotal2 = secondBudg.filter(secondBudg.budget);
+
+        return sumTotal1 && sumTotal2;
+
+
+}
 
 /**
  * Special Arrays
@@ -357,6 +389,13 @@ function sortDrinkByPrice(drinks){
  * Return [0, 0] for an empty string.
  * Return in the order of [hashes, pluses].
  */
+
+function hashPlusCount(string){
+    var hash = '#';
+    var plus = '+';
+
+
+}
 
 
 /**
@@ -543,6 +582,15 @@ function sortDrinkByPrice(drinks){
  * convertToNumber({ piano: "200", tv: "300", stereo: "400" }) ➞ { piano: 200, tv: 300, stereo: 400 }
  */
 
+function convertToNumber(object){
+    var input = new Map [{
+        piano: "200",
+        tv: "300",
+        stereo: "400"
+    }];
+    var obj = Object.fromEntries(input);
+    return obj;
+}
 
 /**
  * Frequency Distribution
