@@ -373,6 +373,21 @@ function getBudgets(arr) {
  *    ]) ➞ 11
  */
 
+function totalPets(people){
+    var numPets = 0;
+    for(var i = 0; i < people.length; i++){
+        numPets += people[i].pets;
+    }
+    return numPets;
+
+}
+
+// console.log(totalPets([
+//     {name: 'Fernando Mendoza', pets: 1},
+//     {name: 'Douglas Hirsh', pets: 8},
+//     {name: 'Kenneth Howell', pets: 2}
+// ]));
+
 
 /**
  * Hashes and Pluses
@@ -391,10 +406,17 @@ function getBudgets(arr) {
  */
 
 function hashPlusCount(string){
-    var hash = '#';
-    var plus = '+';
-
-
+    var hash = 0;
+    var plus = 0;
+    for(var i = 0; i < string.length ; i++){
+        if(string.charAt(i) === '#'){
+            hash = hash + 1;
+        }
+        if(string.charAt(i) === '+'){
+            plus += 1;
+        }
+    }
+    return [hash, plus];
 }
 
 
